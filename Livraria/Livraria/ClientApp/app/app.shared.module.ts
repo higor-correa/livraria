@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './components/app/app.component';
 import { LivroCreateComponent } from './components/livro-create/livro.create.component';
-import { LivroEditComponent } from './components/livro-edit/livro.edit.component';
 import { LivroComponent } from './components/livro/livro.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 
