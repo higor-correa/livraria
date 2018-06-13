@@ -1,0 +1,24 @@
+<form>
+    <div class="form-group">
+        <label for="codigo">Código</label>
+        <input type="text" id="codigo" class="form-control" readonly [(ngModel)]="livro.id"  [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" class="form-control" [(ngModel)]="livro.nome" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+        <label for="autor">Autor</label>
+        <input type="text" id="autor" class="form-control" [(ngModel)]="livro.autor"  [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+        <label for="sinopse">Sinópse</label>
+        <input type="text" id="sinopse" class="form-control" [(ngModel)]="livro.sinopse"  [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+        <label for="dataLancamento">Data de Lançamento</label>
+        <input type="text" id="dataLancamento" class="form-control" [(ngModel)]="livro.dataLancamento"  [ngModelOptions]="{standalone: true}">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="salvar()">Salvar</button>
+    <a [routerLink]="['/livro/']" class='btn btn-primary'>Cancelar</a>
+</form>

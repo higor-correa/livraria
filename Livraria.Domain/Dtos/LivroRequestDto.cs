@@ -1,0 +1,12 @@
+﻿using System;
+
+namespace Livraria.Domain.Dtos
+{
+    public class LivroRequestDto
+    {
+        public string Nome { get; set; }
+        public string Sinopse { get; set; }
+        public string Autor { get; set; }
+        public DateTime? DataLancamento { get; set; }
+    }
+}

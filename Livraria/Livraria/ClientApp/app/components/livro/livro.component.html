@@ -1,0 +1,32 @@
+<h1>Listagem de livros</h1>
+
+<p *ngIf="!livros"><em>Carregando livros...</em></p>
+
+
+<a [routerLink]="['/livro/new']"><span class='glyphicon glyphicon-plus'></span> Novo Livro</a>
+<table class='table' *ngIf="livros">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Autor</th>
+            <th>Sinópse</th>
+            <th>Data de Lançamento</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let livro of livros">
+            <td>{{ livro.id }}</td>
+            <td>{{ livro.nome }}</td>
+            <td>{{ livro.autor }}</td>
+            <td>{{ livro.sinopse }}</td>
+            <td>{{ livro.dataLancamento }}</td>
+            <td>
+                <a [routerLink]="['/livro/edit/', livro.id]"><span class='glyphicon glyphicon-pencil'></span></a>
+                <a (click)="remover(livro.id)"><span class='glyphicon glyphicon-remove'></span></a>
+                
+            </td>
+        </tr>
+    </tbody>
+</table>
